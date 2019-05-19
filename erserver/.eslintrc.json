@@ -1,0 +1,15 @@
+{
+    "extends": "google",
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "overrides": [
+        {
+            "files": ["*.js"],
+            "rules": {
+                "max-len": "off",
+                "indent": ["error", 2]
+            }
+        }
+    ]
+}
