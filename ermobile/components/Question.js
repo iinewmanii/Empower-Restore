@@ -23,18 +23,17 @@ export default class Question extends Component {
     if (res.ok) {
       const json = await res.json();
       console.log(json);
+      const question = json.data.question;
+      const answerA = json.data.answers[0];
+      const answerB = json.data.answers[1];
+      this.setState({
+        question: question,
+        answerA: answerA,
+        answerB: answerB,
+      });
     } else {
       console.log('Error from server');
     }
-    const question = json.data.question;
-    const answerA = json.data.answers[0];
-    const answerB = json.data.answers[1];
-    console.log(json.data);
-    this.setState({
-      question: question,
-      answerA: answerA,
-      answerB: answerB,
-    });
   }
 
   getInitialQuestion = async () => {
