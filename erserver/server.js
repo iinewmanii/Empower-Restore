@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const questions = require('./routes/api/questions');
+const familyTrack = require('./routes/api/familyTrack');
 const actions = require('./routes/api/actions');
 
 
@@ -18,6 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use('/api/questions', questions);
+app.use('/api/familyTrack', familyTrack);
 app.use('/api/actions', actions);
 
 
