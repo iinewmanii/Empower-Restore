@@ -5,11 +5,11 @@ const FamilyTrack = require('../../models/FamilyTrack.js');
 
 // Add resources to the DB
 router.post('/', (req, res) => {
-  const question = new FamilyTrack({
+  const familyTrack = new FamilyTrack({
     tag: req.body.tag,
     question: req.body.question,
   });
-  question.save()
+  familyTrack.save()
     .then((result) => console.log(result))
     .catch((err) => console.error(err));
 });
