@@ -19,7 +19,11 @@ router.get('/:tag', (req, res) => {
   FamilyTrack.findOne({tag: req.params.tag})
     .exec()
     .then((docs) => {
-      res.status(200).json({ok: true, data: docs});
+      if (docs) {
+        res.status(200).json({ok: true, data: docs});
+      } else {
+        res.json({ok: false, data: null});
+      }
     })
     .catch((err) => console.error(err));
 });

@@ -11,4 +11,4 @@ const familyTrackSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('FamilyTrack', familyTrackSchema);
+module.exports = mongoose.model('FamilyTrack', familyTrackSchema, 'familyTrack');
