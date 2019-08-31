@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const FamilyTrackSchema = new Schema({
+const familyTrackSchema = new Schema({
   tag: {
     type: String,
     required: true,
@@ -11,4 +11,4 @@ const FamilyTrackSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('FamilyTrack', FamilyTrackSchema);
+module.exports = mongoose.model('FamilyTrack', familyTrackSchema);
